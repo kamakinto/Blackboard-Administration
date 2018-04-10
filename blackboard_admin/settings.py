@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'users',
     'pages',
 ]
+
+#give the location of the model used for user authentication
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [

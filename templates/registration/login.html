@@ -1,11 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type='submit'>login</button>
-</form>
+
+
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label>Username</label>
+      <input class="form-control" id="{{ form.username.id_for_label }}" maxlength="30" name="{{ form.username.html_name }}"  type="text" />
+    </div>
+    <div class = "form-group">
+        <label>Password</label>
+      <input class="form-control" id="{{ form.password.id_for_label }}" maxlength="30" name="{{ form.password.html_name }}"  type="password" />
+    </div>
+
+    <button type='submit' class="btn btn-primary">login</button>
+  </form>
+
+</div>
 
 {% endblock content %}
