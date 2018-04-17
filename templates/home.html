@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Login form</h1>
 
-sdjkafsd;kafs;d
+<!--IF user is logged in, display the homepage. if the user is not logged in, show the login form -->
+
 {% if user.is_authenticated %}
 <p>hello {{ user.username }}</p>
-
 <p><a href="{% url 'logout' %}">Log out</a></p>
 {% else %}
 <p><a href="{% url 'signup' %}">Sign up</a></p>

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+<h1> Inside the bb admin</h1>
+
+{% comment %}
+Create a side panel with a top level Users item
+Users
+    Upload Users
+    Delete Users
+    Pending deletions
+    view user upload logs
+
+  Courses
+    ??
+    ??
+  Enrollment
+    Manage Course enrollments
+{% endcomment %}
+
+{% block sidebar %}
+<div class="wrapper">
+  <!-- SIDEBAR -->
+  <nav id="sidebar">
+    <!--SIDEBAR HEADER -->
+    <div class="sidebar-header">
+      <h3>Admin Menu</h3>
+    </div>
+
+      <!-- SIDEBAR LINKS -->
+      <ul class="list-unstyled components">
+        <li>
+            <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false">Users  <i class="fas fa-angle-down"></i></a>
+            <ul class="collapse list-unstyled" id="usersSubmenu">
+                <li><a href="#">Create User</a></li>
+                <li><a href="#">User Creation List</a></li>
+                <li><a href="#">Delete User</a></li>
+                <li><a href="#">Deletion User List</a></li>
+                <li><a href="#">View Upload Logs</a></li>
+            </ul>
+            <li>
+                <a href="#coursesSubmenu" data-toggle="collapse" aria-expanded="false">Courses  <i class="fas fa-angle-down"></i></a>
+                <ul class="collapse list-unstyled" id="coursesSubmenu">
+                    <li><a href="#">Create Course</a></li>
+                    <li><a href="#">Course Creation List</a></li>
+                    <li><a href="#">Delete Course</a></li>
+                </ul>
+        </li>
+      </ul>
+  </nav>
+  {% endblock sidebar %}
+
+  {% block content %}
+  <h2>Collapsible Sidebar Using Bootstrap 3</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div class="line"></div>
+
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div class="line"></div>
+
+<h2> Geo api test </h2>
+
+<p> Blackboard Access Token: <strong>{{ access_token }} </strong>
+  <br />
+  Expires in: <strong>{{ expiration_time }}</strong>sec</p>
+  </div>
+
+  {% endblock content %}

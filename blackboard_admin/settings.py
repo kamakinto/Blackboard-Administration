@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'users',
     'pages',
+    'userProfiles',
+    'bbadmin',
 ]
 
 #give the location of the model used for user authentication
@@ -128,5 +130,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+# Location where User media (think file uploads) will be saved
+MEDIA_ROOT = os.path.join(BASE_DIR,  'media')
+
+# Location where we will access the media files
+MEDIA_URL= '/media/'
+#LOGIN_URL='users/'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'

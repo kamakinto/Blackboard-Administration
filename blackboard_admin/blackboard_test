@@ -1,0 +1,1 @@
+curl -k --user 958ce421-1453-42a6-973c-15ba6cc49c72:dSG8xaI1hnVlR5538C2Y8Hegc6Sezzzu --data "grant_type=client_credentials"  https://blackboard.aup.edu/learn/api/public/v1/oauth2/token
