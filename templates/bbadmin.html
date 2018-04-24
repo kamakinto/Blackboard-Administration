@@ -31,20 +31,33 @@ Users
         <li>
             <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false">Users  <i class="fas fa-angle-down"></i></a>
             <ul class="collapse list-unstyled" id="usersSubmenu">
-                <li><a href="#">Create User</a></li>
-                <li><a href="#">User Creation List</a></li>
-                <li><a href="#">Delete User</a></li>
-                <li><a href="#">Deletion User List</a></li>
+                <li><a href="{% url 'create_users' %}">Create Users</a></li>
+                <li><a href="#">Delete Users</a></li>
                 <li><a href="#">View Upload Logs</a></li>
             </ul>
             <li>
                 <a href="#coursesSubmenu" data-toggle="collapse" aria-expanded="false">Courses  <i class="fas fa-angle-down"></i></a>
                 <ul class="collapse list-unstyled" id="coursesSubmenu">
-                    <li><a href="#">Create Course</a></li>
-                    <li><a href="#">Course Creation List</a></li>
-                    <li><a href="#">Delete Course</a></li>
+                    <li><a href="#">Create Courses</a></li>
+                    <li><a href="#">Delete Courses</a></li>
                 </ul>
         </li>
+        <li>
+            <a href="#enrollmentSubmenu" data-toggle="collapse" aria-expanded="false">Course Enrollment  <i class="fas fa-angle-down"></i></a>
+            <ul class="collapse list-unstyled" id="enrollmentSubmenu">
+                <li><a href="#">Enrollment Settings</a></li>
+                <li><a href="#">Sync Enrollments</a></li>
+            </ul>
+    </li>
+    <li>
+        <a href="#logsSubmenu" data-toggle="collapse" aria-expanded="false">Logs <i class="fas fa-angle-down"></i></a>
+        <ul class="collapse list-unstyled" id="logsSubmenu">
+            <li><a href="#">All Logs</a></li>
+            <li><a href="#">User Logs</a></li>
+            <li><a href="#">Course Logs</a></li>
+            <li><a href="#">Enrollment Logs</a></li>
+        </ul>
+</li>
       </ul>
   </nav>
   {% endblock sidebar %}
