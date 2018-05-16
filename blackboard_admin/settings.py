@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'pages',
     'userProfiles',
     'bbadmin',
+    'bbusers',
 ]
 
 #give the location of the model used for user authentication

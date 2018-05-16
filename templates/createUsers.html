@@ -1,39 +1,49 @@
 {% extends 'bbadmin.html' %}
 
 {% block  content %}
-Celery result: {{ celery_test }}
-
-<table class="table table-sm table-bordered">
+<h3>Upload User List</h3>
+<form method='post' action="#">
+  {% csrf_token %}
+  <table class="table center table-striped">
     <thead>
       <tr>
-        <th scope="col">Select</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">email</th>
+        <th scope="col">
+          <input type="checkbox" class="form-control" id="checkAll" />
+        <th scope="col">Username</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Email</th>
       </tr>
     </thead>
     <tbody>
 
-      {% for user  in user_list %}
-
+      {% for user in user_list %}
       <tr>
-          <th scope="row">1</th>
-          <td>{{user.firstName}}</td>
-          <td>{{user.lastName}}</td>
-          <td>{{user.email}}</td>
-        </tr>
+        <td><input type="checkbox"  name="{{ user.username }}" class="check form-control"/></td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.firstName}} </td>
+        <td>{{ user.email }}</td>
+      </tr>
       {% endfor %}
+
     </tbody>
   </table>
 
 
-
-{% for user  in user_list %}
-  {{ user.firstName }}
-  <br />
-{% endfor %}
-
-
+  <button type='submit' class="btn btn-primary"> Add Users</button>
+</form>
 {% endblock content %}
+
+
+{% block js %}
+<script>
+    $("#checkAll").click(function(){
+      $(".check").prop('checked', $(this).prop('checked'));
+    })
+</script>
+
+{% endblock js %}
+
 
 
